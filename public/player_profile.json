@@ -1,0 +1,982 @@
+{
+    "generated_at": "2019-04-30T01:55:40+00:00",
+    "schema": "http:\/\/schemas.sportradar.com\/bsa\/tennis\/v1\/json\/endpoints\/tennis\/player_profile.json",
+    "player": {
+        "id": "sr:competitor:14342",
+        "name": "Federer, Roger",
+        "nationality": "Switzerland",
+        "country_code": "CHE",
+        "abbreviation": "FED",
+        "gender": "male",
+        "date_of_birth": "1981-08-08",
+        "pro_year": 1998,
+        "handedness": "right",
+        "height": 185,
+        "weight": 85
+    },
+    "rankings": [{
+        "player_id": "sr:competitor:14342",
+        "points": 2280,
+        "rank": 2,
+        "race_ranking": true,
+        "name": "ATP",
+        "type": "singles"
+    }, {
+        "player_id": "sr:competitor:14342",
+        "points": 5590,
+        "rank": 4,
+        "race_ranking": false,
+        "name": "ATP",
+        "type": "singles"
+    }],
+    "statistics": {
+        "periods": [{
+            "year": 2019,
+            "surfaces": [{
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 4,
+                    "tournaments_won": 2,
+                    "matches_played": 21,
+                    "matches_won": 19
+                }
+            }, {
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 1,
+                    "tournaments_won": 0,
+                    "matches_played": 3,
+                    "matches_won": 3
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 5,
+                "tournaments_won": 2,
+                "matches_played": 24,
+                "matches_won": 22
+            }
+        }, {
+            "year": 2018,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 5,
+                    "tournaments_won": 2,
+                    "matches_played": 22,
+                    "matches_won": 19
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 6,
+                    "tournaments_won": 1,
+                    "matches_played": 27,
+                    "matches_won": 22
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 1,
+                    "matches_played": 14,
+                    "matches_won": 12
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 15,
+                "tournaments_won": 4,
+                "matches_played": 65,
+                "matches_won": 55
+            }
+        }, {
+            "year": 2017,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 1,
+                    "matches_played": 13,
+                    "matches_won": 11
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 7,
+                    "tournaments_won": 4,
+                    "matches_played": 36,
+                    "matches_won": 33
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 2,
+                    "matches_played": 14,
+                    "matches_won": 12
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 14,
+                "tournaments_won": 7,
+                "matches_played": 65,
+                "matches_won": 58
+            }
+        }, {
+            "year": 2016,
+            "surfaces": [{
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 0,
+                    "matches_played": 13,
+                    "matches_won": 10
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 0,
+                    "matches_played": 5,
+                    "matches_won": 3
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 0,
+                    "matches_played": 11,
+                    "matches_won": 8
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 8,
+                "tournaments_won": 0,
+                "matches_played": 29,
+                "matches_won": 21
+            }
+        }, {
+            "year": 2015,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 1,
+                    "matches_played": 12,
+                    "matches_won": 10
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 7,
+                    "tournaments_won": 3,
+                    "matches_played": 31,
+                    "matches_won": 27
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 1,
+                    "matches_played": 12,
+                    "matches_won": 11
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 5,
+                    "tournaments_won": 1,
+                    "matches_played": 17,
+                    "matches_won": 13
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 18,
+                "tournaments_won": 6,
+                "matches_played": 76,
+                "matches_won": 62
+            }
+        }, {
+            "year": 2014,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 1,
+                    "matches_played": 13,
+                    "matches_won": 11
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 9,
+                    "tournaments_won": 3,
+                    "matches_played": 46,
+                    "matches_won": 40
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 1,
+                    "matches_played": 11,
+                    "matches_won": 10
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 4,
+                    "tournaments_won": 0,
+                    "matches_played": 10,
+                    "matches_won": 6
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 18,
+                "tournaments_won": 5,
+                "matches_played": 80,
+                "matches_won": 67
+            }
+        }, {
+            "year": 2013,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 4,
+                    "tournaments_won": 0,
+                    "matches_played": 16,
+                    "matches_won": 11
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 6,
+                    "tournaments_won": 0,
+                    "matches_played": 23,
+                    "matches_won": 17
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 5,
+                    "tournaments_won": 0,
+                    "matches_played": 17,
+                    "matches_won": 12
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 1,
+                    "matches_played": 6,
+                    "matches_won": 5
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 17,
+                "tournaments_won": 1,
+                "matches_played": 62,
+                "matches_won": 45
+            }
+        }, {
+            "year": 2012,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 4,
+                    "tournaments_won": 1,
+                    "matches_played": 17,
+                    "matches_won": 12
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 8,
+                    "tournaments_won": 3,
+                    "matches_played": 37,
+                    "matches_won": 32
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 1,
+                    "matches_played": 17,
+                    "matches_won": 15
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 1,
+                    "matches_played": 15,
+                    "matches_won": 13
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 18,
+                "tournaments_won": 6,
+                "matches_played": 86,
+                "matches_won": 72
+            }
+        }, {
+            "year": 2011,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 3,
+                    "matches_played": 15,
+                    "matches_won": 15
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 8,
+                    "tournaments_won": 1,
+                    "matches_played": 37,
+                    "matches_won": 30
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 0,
+                    "matches_played": 6,
+                    "matches_won": 4
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 4,
+                    "tournaments_won": 0,
+                    "matches_played": 16,
+                    "matches_won": 12
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 17,
+                "tournaments_won": 4,
+                "matches_played": 74,
+                "matches_won": 61
+            }
+        }, {
+            "year": 2010,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 4,
+                    "tournaments_won": 3,
+                    "matches_played": 18,
+                    "matches_won": 17
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 9,
+                    "tournaments_won": 2,
+                    "matches_played": 38,
+                    "matches_won": 31
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 0,
+                    "matches_played": 10,
+                    "matches_won": 8
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 4,
+                    "tournaments_won": 0,
+                    "matches_played": 14,
+                    "matches_won": 10
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 19,
+                "tournaments_won": 5,
+                "matches_played": 80,
+                "matches_won": 66
+            }
+        }, {
+            "year": 2009,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 3,
+                    "tournaments_won": 0,
+                    "matches_played": 10,
+                    "matches_won": 6
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 7,
+                    "tournaments_won": 1,
+                    "matches_played": 36,
+                    "matches_won": 30
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 1,
+                    "matches_played": 8,
+                    "matches_won": 7
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 4,
+                    "tournaments_won": 2,
+                    "matches_played": 18,
+                    "matches_won": 16
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 16,
+                "tournaments_won": 4,
+                "matches_played": 72,
+                "matches_won": 59
+            }
+        }, {
+            "year": 2008,
+            "surfaces": [{
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 1,
+                    "matches_played": 8,
+                    "matches_won": 7
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 6,
+                    "tournaments_won": 1,
+                    "matches_played": 29,
+                    "matches_won": 24
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 7,
+                    "tournaments_won": 1,
+                    "matches_played": 26,
+                    "matches_won": 20
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 1,
+                    "matches_played": 12,
+                    "matches_won": 11
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 17,
+                "tournaments_won": 4,
+                "matches_played": 75,
+                "matches_won": 62
+            }
+        }, {
+            "year": 2007,
+            "surfaces": [{
+                "type": "Synthetic indoor",
+                "statistics": {
+                    "tournaments_played": 1,
+                    "tournaments_won": 1,
+                    "matches_played": 5,
+                    "matches_won": 4
+                }
+            }, {
+                "type": "Hardcourt indoor",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 1,
+                    "matches_played": 7,
+                    "matches_won": 6
+                }
+            }, {
+                "type": "Red clay",
+                "statistics": {
+                    "tournaments_played": 5,
+                    "tournaments_won": 1,
+                    "matches_played": 24,
+                    "matches_won": 20
+                }
+            }, {
+                "type": "Hardcourt outdoor",
+                "statistics": {
+                    "tournaments_played": 7,
+                    "tournaments_won": 4,
+                    "matches_played": 33,
+                    "matches_won": 30
+                }
+            }, {
+                "type": "Grass",
+                "statistics": {
+                    "tournaments_played": 2,
+                    "tournaments_won": 1,
+                    "matches_played": 8,
+                    "matches_won": 7
+                }
+            }],
+            "statistics": {
+                "tournaments_played": 17,
+                "tournaments_won": 8,
+                "matches_played": 77,
+                "matches_won": 67
+            }
+        }]
+    },
+    "tournaments_played": [{
+        "id": "sr:tournament:2745",
+        "name": "ATP Miami, USA Men Singles",
+        "parent_id": "sr:tournament:2743",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2739",
+        "name": "ATP Indian Wells, USA Men Singles",
+        "parent_id": "sr:tournament:2737",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2667",
+        "name": "ATP Dubai, UAE Men Singles",
+        "parent_id": "sr:tournament:2665",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_500"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2567",
+        "name": "Australian Open Men Singles",
+        "parent_id": "sr:tournament:2565",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "grand_slam"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:620",
+        "name": "Hopman Cup",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:181",
+            "name": "Hopman Cup"
+        },
+        "type": "mixed",
+        "gender": "mixed",
+        "country_format": true
+    }, {
+        "id": "sr:tournament:21406",
+        "name": "ATP World Tour Finals Men Singles",
+        "parent_id": "sr:tournament:21404",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_world_tour_finals"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2661",
+        "name": "ATP Paris, France Men Singles",
+        "parent_id": "sr:tournament:2659",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2613",
+        "name": "ATP Basel, Switzerland Men Singles",
+        "parent_id": "sr:tournament:2611",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_500"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2679",
+        "name": "ATP Rotterdam, Netherlands Men Singles",
+        "parent_id": "sr:tournament:2677",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_500"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:3085",
+        "name": "ATP Shanghai, China Men Singles",
+        "parent_id": "sr:tournament:3083",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2591",
+        "name": "US Open Men Singles",
+        "parent_id": "sr:tournament:2589",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "grand_slam"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2983",
+        "name": "ATP Cincinnati, USA Men Singles",
+        "parent_id": "sr:tournament:2981",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2555",
+        "name": "Wimbledon Men Singles",
+        "parent_id": "sr:tournament:2553",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "grand_slam"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2859",
+        "name": "ATP Halle, Germany Men Singles",
+        "parent_id": "sr:tournament:2857",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_500"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2775",
+        "name": "ATP Stuttgart, Germany Men Singles",
+        "parent_id": "sr:tournament:2773",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_250"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:8285",
+        "name": "ATP Montreal, Canada Men Singles",
+        "parent_id": "sr:tournament:8283",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2781",
+        "name": "ATP Rome, Italy Men Singles",
+        "parent_id": "sr:tournament:2779",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:3121",
+        "name": "ATP Monte Carlo, Monaco Men Singles",
+        "parent_id": "sr:tournament:3119",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2619",
+        "name": "ATP Brisbane, Australia Men Singles",
+        "parent_id": "sr:tournament:2617",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_250"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2579",
+        "name": "French Open Men Singles",
+        "parent_id": "sr:tournament:2577",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "grand_slam"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2787",
+        "name": "ATP Madrid, Spain Men Singles",
+        "parent_id": "sr:tournament:2785",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:12321",
+        "name": "ATP Istanbul, Turkey Men Singles",
+        "parent_id": "sr:tournament:12319",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_250"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2995",
+        "name": "ATP Toronto, Canada Men Singles",
+        "parent_id": "sr:tournament:2993",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_1000"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2959",
+        "name": "ATP Gstaad, Switzerland Men Singles",
+        "parent_id": "sr:tournament:2957",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_250"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2935",
+        "name": "ATP Hamburg, Germany Men Singles",
+        "parent_id": "sr:tournament:2933",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_500"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2603",
+        "name": "ATP Doha, Qatar Men Singles",
+        "parent_id": "sr:tournament:2601",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_250"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:8183",
+        "name": "Olympic Tournament Men Singles",
+        "parent_id": "sr:tournament:8181",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:3091",
+        "name": "ATP Stockholm, Sweden Men Singles",
+        "parent_id": "sr:tournament:3089",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP",
+            "level": "atp_250"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:2799",
+        "name": "ATP Oeiras, Portugal Men Singles",
+        "parent_id": "sr:tournament:2797",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP"
+        },
+        "type": "singles",
+        "gender": "men"
+    }, {
+        "id": "sr:tournament:354",
+        "name": "Tennis Masters Cup Shanghai",
+        "sport": {
+            "id": "sr:sport:5",
+            "name": "Tennis"
+        },
+        "category": {
+            "id": "sr:category:3",
+            "name": "ATP"
+        },
+        "type": "singles",
+        "gender": "men"
+    }]
+}
