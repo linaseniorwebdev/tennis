@@ -11,10 +11,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <table id="countries">
 	<thead>
 	<tr>
-		<th>Code</th>
 		<th>ID</th>
-		<th>Name</th>
-		<th>Abbreviation</th>
+		<th>Points</th>
+		<th>Rank</th>
+		<th>Movement</th>
+		<th>Played</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -30,29 +31,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			/*
 			for (let i = 0; i < 500; i++) {
-				let buffer = '<tr><td>' + wta.player_rankings[i].player.country_code;
+				let buffer = '<tr><td>' + wta.player_rankings[i].player.id;
 				buffer += '</td><td>';
-				buffer += wta.player_rankings[i].player.id;
+				buffer += wta.player_rankings[i].points;
 				buffer += '</td><td>';
-				buffer += wta.player_rankings[i].player.name;
+				buffer += wta.player_rankings[i].rank;
 				buffer += '</td><td>';
-				buffer += wta.player_rankings[i].player.abbreviation + '</td></tr>';
+				buffer += wta.player_rankings[i].ranking_movement;
+				buffer += '</td><td>';
+				buffer += wta.player_rankings[i].tournaments_played + '</td></tr>';
 				$("#countries tbody").append(buffer);
 			}
 
 			for (let i = 0; i < 500; i++) {
-				let buffer = '<tr><td>' + atp.player_rankings[i].player.country_code;
+				let buffer = '<tr><td>' + atp.player_rankings[i].player.id;
 				buffer += '</td><td>';
-				buffer += atp.player_rankings[i].player.id;
+				buffer += atp.player_rankings[i].points;
 				buffer += '</td><td>';
-				buffer += atp.player_rankings[i].player.name;
+				buffer += atp.player_rankings[i].rank;
 				buffer += '</td><td>';
-				buffer += atp.player_rankings[i].player.abbreviation + '</td></tr>';
+				buffer += atp.player_rankings[i].ranking_movement;
+				buffer += '</td><td>';
+				buffer += atp.player_rankings[i].tournaments_played + '</td></tr>';
 				$("#countries tbody").append(buffer);
 			}
 			*/
 
-			console.log(atp.player_rankings[0].player);
+			// console.log(wta.player_rankings[0]);
 		});
 	});
 </script>

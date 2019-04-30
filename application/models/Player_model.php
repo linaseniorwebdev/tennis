@@ -13,6 +13,16 @@ class Player_model extends CI_Model {
 	}
 
 	/**
+	 * Get player by unique id
+	 * @param $uid
+	 * @param string $type
+	 * @return array
+	 */
+	public function get_player_by_uid($uid, $type = 'atp') {
+		return $this->db->get_where('players_' . $type, array('unique' => $uid))->row_array();
+	}
+
+	/**
 	 * Get all players
 	 * @param string $type
 	 * @return array
