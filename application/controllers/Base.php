@@ -14,8 +14,8 @@ class Base extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 
+		$this->load->model('User_model');
 		if ($this->session->user) {
-			$this->load->model('User_model');
 			$user = $this->User_model->get_by_id($this->session->user);
 			$this->user = User::init($user);
 			$this->login = true;

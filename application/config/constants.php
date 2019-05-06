@@ -86,3 +86,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 defined('REFERRER')      OR define('REFERRER', 'http://www.flashscore.com/');
+defined('SALT')      OR define('SALT', 'You will never reach here!');

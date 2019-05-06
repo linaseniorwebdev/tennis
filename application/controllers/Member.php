@@ -25,6 +25,31 @@ class Member extends Base {
 	}
 
 	public function signup() {
-
+		if ($this->login) {
+			redirect('member');
+		} else {
+			$data = array();
+			if ($this->post_exist()) {
+				$data = $this->input->post();
+				if ($data['agree'] !== 'on') {
+					$data['error'] = 'You should agree with our terms and conditions';
+				} else {
+					$result = $this->User_model->get_by_email($data['email']);
+					if ($result) {
+						$data['error'] = 'Email already registered';
+					} else {
+						$params = array(
+							'email' => $data['email'],
+							'password' => md5(SALT . $data['password']),
+							'firstname' => $data['first'],
+							'lastname' => $data['last']
+						);
+					}
+				}
+			}
+			$this->load_header('Member Signup');
+			$this->load->view('auth/signup', $data);
+			$this->load_footer();
+		}
 	}
 }

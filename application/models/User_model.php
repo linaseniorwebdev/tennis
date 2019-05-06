@@ -130,7 +130,7 @@ class User_model extends CI_Model {
 
 	/**
 	 * Function to get user by email
-	 * @param $name
+	 * @param $email
 	 * @return array
 	 */
 	public function get_by_email($email) {

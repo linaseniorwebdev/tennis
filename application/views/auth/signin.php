@@ -11,13 +11,13 @@
 									<path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z"></path>
 								</g>
 							</svg>
-							<span class="brand-name">Sleek Dashboard</span>
+							<span class="brand-name">Tennis Prediction</span>
 						</a>
 					</div>
 				</div>
 				<div class="card-body p-5">
 					<h4 class="text-dark mb-5">Sign In</h4>
-					<form action="/index.html">
+					<form action="<?php echo base_url('member/signin') ?>" method="post">
 						<div class="row">
 							<div class="form-group col-md-12 mb-4">
 								<input type="email" class="form-control input-lg" id="email" aria-describedby="emailHelp" placeholder="Username">
@@ -33,11 +33,11 @@
 											<div class="control-indicator"></div>
 										</label>
 									</div>
-									<p><a class="text-blue" href="#">Forgot Your Password?</a></p>
+									<p><a class="text-blue" href="<?php echo base_url('member/forgot') ?>">Forgot Your Password?</a></p>
 								</div>
 								<button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Sign In</button>
 								<p>Don't have an account yet ?
-									<a class="text-blue" href="sign-up.html">Sign Up</a>
+									<a class="text-blue" href="<?php echo base_url('member/signup') ?>">Sign Up</a>
 								</p>
 							</div>
 						</div>
