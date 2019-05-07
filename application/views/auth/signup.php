@@ -54,6 +54,7 @@
 								<p>Already have an account?
 									<a class="text-blue" href="<?php echo base_url('member/signin') ?>">Sign in</a>
 								</p>
+								<input type="hidden" id="geodata" name="geodata" />
 							</div>
 						</div>
 					</form>
@@ -80,4 +81,24 @@
 
 	password.onchange = validatePassword;
 	confirm_password.onkeyup = validatePassword;
+
+	let getHTML = function(url, callback) {
+		if (!window.XMLHttpRequest) return;
+		let xhr = new XMLHttpRequest();
+		xhr.onload = function() {
+			if (callback && typeof(callback) === 'function' ) {
+				callback(this.responseText);
+			}
+		};
+		xhr.open('GET', url, true);
+		xhr.send(null);
+	};
+
+	window.onload = function() {
+		getHTML('http://www.geoplugin.net/php.gp', function(response) {
+			let elem = document.getElementById('geodata');
+			elem.value = response;
+		});
+	};
+
 </script>

@@ -85,5 +85,7 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 
-defined('REFERRER')      OR define('REFERRER', 'http://www.flashscore.com/');
-defined('SALT')      OR define('SALT', 'You will never reach here!');
+defined('REFERRER')            OR define('REFERRER', 'http://www.flashscore.com/');
+defined('SALT')                OR define('SALT', 'You will never reach here!');
+defined('ROOT_MAIL')           OR define('ROOT_MAIL', 'noreply@prediction.com');
+defined('ROOT_NAME')           OR define('ROOT_NAME', 'Site Admin');
