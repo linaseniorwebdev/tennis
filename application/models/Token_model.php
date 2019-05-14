@@ -12,16 +12,6 @@ class Token_model extends CI_Model {
 	}
 
 	/**
-	 * Get token by code
-	 * @param $code
-	 * @param int $type
-	 * @return array
-	 */
-	public function get_token_by_code($code, $type = 1) {
-		return $this->db->get_where('tokens', array('code' . $type => $code))->row_array();
-	}
-
-	/**
 	 * Get all tokens
 	 */
 	public function get_all_tokens() {
@@ -57,5 +47,14 @@ class Token_model extends CI_Model {
 	 */
 	public function delete_token($id) {
 		return $this->db->delete('tokens', array('id' => $id));
+	}
+
+	/**
+	 * Get activation token
+	 * @param $token
+	 * @return mixed
+	 */
+	public function get_activation_token($token) {
+		return $this->db->get_where('tokens', array('token' => $token, 'action' => 0))->row_array();
 	}
 }

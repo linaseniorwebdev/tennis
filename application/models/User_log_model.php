@@ -1,6 +1,6 @@
 <?php
 
-class User_model extends CI_Model {
+class User_log_model extends CI_Model {
 
 	private $table, $column_order, $column_search, $order;
 
@@ -10,9 +10,9 @@ class User_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 
-		$this->table = 'users';
-		$this->column_order = array(null, 'id');
-		$this->column_search = array('email', 'firstname', 'lastname');
+		$this->table = 'users_log';
+		$this->column_order = array(null);
+		$this->column_search = array('username', 'firstname', 'lastname');
 		$this->order = array('id' => 'asc');
 	}
 
@@ -64,67 +64,49 @@ class User_model extends CI_Model {
 	}
 
 	/**
-	 * Get all users
+	 * Get all logs
 	 */
-	public function get_all_users() {
+	public function get_all_logs() {
 		$this->db->order_by('id', 'desc');
-		return $this->db->get('users')->result_array();
+		return $this->db->get('users_log')->result_array();
 	}
 
 	/**
-	 * Function to add new user
+	 * Function to add new log
 	 * @param $params
 	 * @return int
 	 */
-	public function add_user($params) {
-		$this->db->insert('users', $params);
+	public function add_log($params) {
+		$this->db->insert('users_log', $params);
 		return $this->db->insert_id();
 	}
 
 	/**
-	 * Function to update user
+	 * Function to update log
 	 * @param $id
 	 * @param $params
 	 * @return bool
 	 */
-	public function update_user($id, $params) {
+	public function update_log($id, $params) {
 		$this->db->where('id', $id);
-		return $this->db->update('users', $params);
+		return $this->db->update('users_log', $params);
 	}
 
 	/**
-	 * Function to delete user
+	 * Function to delete log
 	 * @param $id
 	 * @return mixed
 	 */
-	public function delete_user($id) {
-		return $this->db->delete('users', array('id' => $id));
+	public function delete_log($id) {
+		return $this->db->delete('users_log', array('id' => $id));
 	}
 
 	/**
-	 * Function to get user by id
-	 * @param $user_id
+	 * Function to get log by id
+	 * @param $log_id
 	 * @return array
 	 */
-	public function get_by_id($user_id) {
-		return $this->db->get_where('users', array('id' => $user_id))->row_array();
-	}
-
-	/**
-	 * Function to get user by name
-	 * @param $name
-	 * @return array
-	 */
-	public function get_by_name($name) {
-		return $this->db->get_where('users', array('username' => $name))->row_array();
-	}
-
-	/**
-	 * Function to get user by email
-	 * @param $email
-	 * @return array
-	 */
-	public function get_by_email($email) {
-		return $this->db->get_where('users', array('email' => $email))->row_array();
+	public function get_by_id($log_id) {
+		return $this->db->get_where('users_log', array('id' => $log_id))->row_array();
 	}
 }

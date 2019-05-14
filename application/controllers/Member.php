@@ -6,24 +6,69 @@ require_once APPPATH . 'controllers/Base.php';
 
 class Member extends Base {
 
+	/**
+	 * Index page
+	 */
 	public function index() {
 		if ($this->login) {
+			if ($this->user->getStatus() === 0) {
+				redirect('member/needs_activation');
+			}
 			echo 'Index Page';
 		} else {
 			redirect('member/signin');
 		}
 	}
 
+	/**
+	 * Sign in module
+	 */
 	public function signin() {
 		if ($this->login) {
 			redirect('member');
 		} else {
+			$data = array();
+			if ($this->post_exist()) {
+				$data = $this->input->post();
+				$username = $data['username'];
+				$password = $data['password'];
+				$user = $this->User_model->get_by_email($username);
+				if ($user) {
+					// Track User's IP Address
+					$res = unserialize($data['geodata']);
+					$user_ip = $res['geoplugin_request'];
+
+					$params = array(
+						'user' => $user['id'],
+						'ip' => $user_ip
+					);
+
+					$this->load->model('User_log_model');
+
+					if ($user['password'] === md5(SALT . $password)) {
+						$params['status'] = 1;
+						$this->User_log_model->add_log($params);
+						$this->session->set_userdata('user', $user['id']);
+						redirect('member');
+					} else {
+						$data['error'] = 'Incorrect password';
+						$params['status'] = 0;
+						$this->User_log_model->add_log($params);
+					}
+				} else {
+					$data['error'] = 'Unregistered user';
+				}
+			}
 			$this->load_header('Member Login');
-			$this->load->view('auth/signin');
+			$this->load->view('auth/signin', $data);
 			$this->load_footer();
 		}
 	}
 
+	/**
+	 * Sign up module
+	 * @throws Exception
+	 */
 	public function signup() {
 		if ($this->login) {
 			redirect('member');
@@ -31,6 +76,9 @@ class Member extends Base {
 			$data = array();
 			if ($this->post_exist()) {
 				$data = $this->input->post();
+				if (!isset($data['agree'])) {
+					$data['agree'] = 'off';
+				}
 				if ($data['agree'] !== 'on') {
 					$data['error'] = 'You should agree with our terms and conditions';
 				} else {
@@ -66,15 +114,15 @@ class Member extends Base {
 							'action_url' => base_url('member/activate/' . $token)
 						);
 
-						/*  Not completed yet */
+						// Send activation mail
 						if ($this->sendmail('welcome', $data['email'], $maildata)) {
-
+							$this->load->model('Token_model');
+							$params = array('token' => $token, 'user' => $user_id, 'action' => 0);
+							$this->Token_model->add_token($params);
+							redirect('member/mail/sent');
+						} else {
+							redirect('member/mail/failed');
 						}
-
-						$this->load->model('Token_model');
-						$params = array('token' => $token, 'user' => $user_id, 'action' => 0);
-						$this->Token_model->add_token($params);
-
 					}
 				}
 			}
@@ -84,6 +132,21 @@ class Member extends Base {
 		}
 	}
 
+	/**
+	 * Logout module
+	 */
+	public function logout() {
+		$this->session->unset_userdata('user');
+		redirect('/');
+	}
+
+	/**
+	 * Email send module
+	 * @param $module
+	 * @param $address
+	 * @param $data
+	 * @return bool
+	 */
 	private function sendmail($module, $address, $data) {
 		$this->email->initialize();
 		$this->email->from(ROOT_MAIL, ROOT_NAME);
@@ -92,8 +155,83 @@ class Member extends Base {
 		$this->email->message($this->load->view('email/' . $module, $data, TRUE));
 		if ($this->email->send()) {
 			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * After-end-mail module
+	 * @param null $com
+	 */
+	public function mail($com = null) {
+		if ($com) {
+			if ($com === 'sent') {
+				$this->load_header('Email sent successfully');
+				$this->load->view('front/email_sent');
+				$this->load_footer();
+			} elseif ($com === 'failed') {
+				$this->load_header('Oops!');
+				$this->load->view('front/email_fail');
+				$this->load_footer();
+			} else {
+				$this->bad_request();
+			}
 		} else {
-			return false;
+			$this->bad_request();
+		}
+	}
+
+	/**
+	 * User activation for the first time
+	 * @param null $token
+	 */
+	public function activate($token = null) {
+		if ($token) {
+			$this->load->model('Token_model');
+			$row = $this->Token_model->get_activation_token($token);
+			if ($row) {
+				$this->User_model->update_user($row['user'], array('status' => 1));
+				$this->Token_model->delete_token($row['id']);
+				redirect('member');
+			} else {
+				$this->bad_request();
+			}
+		} else {
+			$this->bad_request();
+		}
+	}
+
+	/**
+	 * User needs account activation
+	 */
+	public function needs_activation() {
+		$this->load_header('Your account needs activation');
+		$this->load->view('front/needs_activation');
+		$this->load_footer();
+	}
+
+	public function request_activation() {
+		// Generate Token
+		$zone = new DateTimeZone('America/Argentina/Buenos_Aires');
+		$now = new DateTime('now', $zone);
+		$token = md5($now->format('Y-m-d H:i:s')) . md5($this->user->getEmail());
+
+		// Prepare for Sending Mail
+		$maildata = array(
+			'title' => 'Account Confirmation',
+			'app_name' => 'Tennis Prediction',
+			'first_name' => $this->user->getFirst(),
+			'action_url' => base_url('member/activate/' . $token)
+		);
+
+		// Send activation mail
+		if ($this->sendmail('welcome', $this->user->getEmail(), $maildata)) {
+			$this->load->model('Token_model');
+			$params = array('token' => $token, 'user' => $this->user->getId(), 'action' => 0);
+			$this->Token_model->add_token($params);
+			redirect('member/mail/sent');
+		} else {
+			redirect('member/mail/failed');
 		}
 	}
 }
