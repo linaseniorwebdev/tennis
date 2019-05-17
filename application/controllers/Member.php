@@ -11,8 +11,14 @@ class Member extends Base {
 	 */
 	public function index() {
 		if ($this->login) {
+			// Check if user already activated
 			if ($this->user->getStatus() === 0) {
 				redirect('member/needs_activation');
+			}
+
+			// Check if user chose membership plan
+			if ($this->user->getMembership() === 0) {
+				redirect('member/membership');
 			}
 			echo 'Index Page';
 		} else {
@@ -210,6 +216,10 @@ class Member extends Base {
 		$this->load_footer();
 	}
 
+	/**
+	 * Request for an activation
+	 * @throws Exception
+	 */
 	public function request_activation() {
 		// Generate Token
 		$zone = new DateTimeZone('America/Argentina/Buenos_Aires');
@@ -233,5 +243,14 @@ class Member extends Base {
 		} else {
 			redirect('member/mail/failed');
 		}
+	}
+
+	/**
+	 * Select membership
+	 */
+	public function membership() {
+		$this->load_header('Select your membership plan');
+		$this->load->view('front/membership');
+		$this->load_footer();
 	}
 }

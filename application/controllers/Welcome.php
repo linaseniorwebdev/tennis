@@ -7,7 +7,7 @@ class Welcome extends CI_Controller {
 	 * Index Page
 	 */
 	public function index() {
-		$this->load->view('welcome_message');
+		
 	}
 }
 
